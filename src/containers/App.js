@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react';
 import CardList from "../components/CardList";
 import SearchBox from "../components/SearchBox";
 import Scroll from "./Scroll";
-import ErrorBoundary from '../ErrorBoundary';
-import './index.css';
+import ErrorBoundary from './ErrorBoundary';
 import './App.css';
 
 const App = () => {
