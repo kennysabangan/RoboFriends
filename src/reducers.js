@@ -1,4 +1,10 @@
-import { CHANGE_SEARCH_FIELD, REQUEST_ROBOTS_FAILED, REQUEST_ROBOTS_PENDING, REQUEST_ROBOTS_SUCCESS } from "./constants"
+import {
+  CHANGE_SEARCH_FIELD,
+  REQUEST_ROBOTS_FAILED,
+  REQUEST_ROBOTS_SUCCESS,
+  REQUEST_ROBOTS_PENDING
+} from "./constants"
+
 
 const initialStateSearch = {
   searchField: '',
