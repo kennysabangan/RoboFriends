@@ -3,23 +3,23 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { applyMiddleware, createStore, combineReducers } from 'redux';
 import { searchRobots, requestRobots } from './reducers';
-import { createLogger } from 'redux-logger';
+// import { createLogger } from 'redux-logger';
 import thunkMiddleware from 'redux-thunk';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
-import App from './containers/App';
 import 'tachyons'
 import './index.css'
+import App from './containers/App';
 
 const rootReducer = combineReducers({ searchRobots, requestRobots })
 
-let middleware = []
-if (process.env.NODE_ENV === 'production') {
-  middleware = [thunkMiddleware]
-} else {
-  const logger = createLogger();
-  middleware = [thunkMiddleware, logger]
-}
+let middleware: any = [thunkMiddleware]
+// if (process.env.NODE_ENV === 'production') {
+//   middleware = [thunkMiddleware]
+// } else {
+//   const logger = createLogger();
+//   middleware = [thunkMiddleware, logger]
+// }
 const store = createStore(rootReducer, applyMiddleware(...middleware))
 
 ReactDOM.render(

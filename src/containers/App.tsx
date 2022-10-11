@@ -21,8 +21,8 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-const App = (props) => (
-  <MainPage {...props} />
-)
+const App: React.FC = props => {
+  return <MainPage {...props} />
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
